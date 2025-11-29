@@ -23,7 +23,7 @@ export default function About() {
 
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="https://res.cloudinary.com/dtjjjyekl/image/upload/v1764432787/feed_uqztgw.jpg"
                 alt="Team working"
                 className="rounded-2xl shadow-2xl"
               />

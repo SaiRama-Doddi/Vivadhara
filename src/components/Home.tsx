@@ -169,23 +169,95 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       </section>
 
       {/* ---------------- CTA SECTION ---------------- */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-green-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Need Premium-Quality Feed Ingredients?
-          </h2>
-          <p className="text-xl mb-8 text-green-100">
-            We supply to Dairy Farms, Poultry Units & Aquaculture Industries.
-          </p>
+    <section
+  className="py-20 bg-cover bg-center bg-no-repeat relative"
+  style={{
+    backgroundImage:
+      "url('https://i.pinimg.com/1200x/0c/7f/31/0c7f31aacac02d554c9594e1c4163579.jpg')",
+  }}
+>
+  {/* Dark overlay for readability */}
+  <div className="absolute inset-0 bg-black/50"></div>
 
-          <button
-            onClick={() => onNavigate("contact")}
-            className="bg-white text-green-700 px-8 py-4 rounded-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300"
-          >
-            Contact Us Today
-          </button>
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+    <h2 className="text-4xl font-bold mb-6">
+      Need Premium-Quality Feed Ingredients?
+    </h2>
+
+    <p className="text-xl mb-8 text-gray-200">
+      We supply to Dairy Farms, Poultry Units & Aquaculture Industries.
+    </p>
+
+    <button
+      onClick={() => onNavigate('contact')}
+      className="bg-white text-green-700 cursor-pointer px-8 py-4 rounded-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300"
+    >
+      Contact Us Today
+    </button>
+  </div>
+</section>
+
+
+{/* ---------------- WHAT MAKES US DIFFERENT ---------------- */}
+<section className="py-20 bg-[#F7FBEF]">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-bold text-gray-900">
+        What Makes <span className="text-green-600">Vivadhara Agro</span> Different?
+      </h2>
+      <p className="text-lg text-gray-600 mt-3">
+        Premium feed ingredients backed with trust, quality & consistency.
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-3 gap-10">
+
+      {/* CARD 1 */}
+      <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 border border-green-100">
+        <div className="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center">
+<img src="https://cdn-icons-png.flaticon.com/512/706/706164.png" className="w-10 h-10" />
+
         </div>
-      </section>
+        <h3 className="text-xl font-bold text-gray-900 text-center">
+          100% Natural Sourcing
+        </h3>
+        <p className="text-gray-600 text-center mt-2">
+          We source from trusted farms & certified suppliers, ensuring purity and nutrition.
+        </p>
+      </div>
+
+      {/* CARD 2 */}
+      <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 border border-yellow-100">
+        <div className="w-16 h-16 mx-auto mb-4 bg-yellow-100 rounded-full flex items-center justify-center">
+          <img src="https://cdn-icons-png.flaticon.com/512/1998/1998610.png" className="w-10 h-10" />
+        </div>
+        <h3 className="text-xl font-bold text-gray-900 text-center">
+          Global Import Quality
+        </h3>
+        <p className="text-gray-600 text-center mt-2">
+          International standard feed ingredients imported from reliable mills.
+        </p>
+      </div>
+
+      {/* CARD 3 */}
+      <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 border border-blue-100">
+        <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
+     <img src="https://cdn-icons-png.flaticon.com/512/9425/9425727.png" className="w-10 h-10" />
+
+        </div>
+        <h3 className="text-xl font-bold text-gray-900 text-center">
+          Tested & Certified
+        </h3>
+        <p className="text-gray-600 text-center mt-2">
+          Every batch undergoes nutritional, moisture & toxin checks before dispatch.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
     </div>
   );
 };

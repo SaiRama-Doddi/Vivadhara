@@ -36,7 +36,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
             <img
               src="/vivadhara.jpg"
               alt="Logo"
-              className="w-18 h-18 rounded-full shadow-xl object-cover"
+              className="w-18 h-18 rounded-full shadow-xl object-cover border-2 border-[#4caf50]"
             />
            <span className="text-xl sm:text-2xl md:text-3xl font-semibold text-white uppercase">
   Vivadhara Agro
