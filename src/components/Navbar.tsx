@@ -38,9 +38,10 @@ export default function Navbar({ onNavigate }: NavbarProps) {
               alt="Logo"
               className="w-18 h-18 rounded-full shadow-xl object-cover"
             />
-            <span className="text-2xl md:text-2xl sm:text-xl font-semibold text-white uppercase">
-              Vivadhara Agro
-            </span>
+           <span className="text-xl sm:text-2xl md:text-3xl font-semibold text-white uppercase">
+  Vivadhara Agro
+</span>
+
           </div>
 
           {/* DESKTOP NAV */}
