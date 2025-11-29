@@ -9,7 +9,7 @@ interface CartModalProps {
 }
 
 export default function CartModal({ isOpen, onClose }: CartModalProps) {
-  const { cart, updateQuantity, removeFromCart,clearCart } = useCart();
+  const { cart, removeFromCart,clearCart } = useCart();
   const [showCheckout, setShowCheckout] = useState(false);
   const [userDetails, setUserDetails] = useState<UserDetails>({
     name: '',
