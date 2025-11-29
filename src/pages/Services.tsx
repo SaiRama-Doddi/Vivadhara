@@ -15,12 +15,12 @@ export default function Services({ onNavigate }: ServicesProps) {
 
   return (
     <div className="min-h-screen pt-20">
-      <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-green-50">
+      <section className="py-20 bg-[#FAFDD6]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-gray-900 mb-4">
               Our
-              <span className="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent"> Services</span>
+              <span className="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent"> Products</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Comprehensive digital solutions tailored to your business needs

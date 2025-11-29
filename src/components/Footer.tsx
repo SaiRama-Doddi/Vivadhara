@@ -26,8 +26,8 @@ export default function Footer({ onCartClick }: FooterProps) {
                   className="w-15 h-15 rounded-full shadow-md object-cover"
                 />
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
-                Vivadhara
+              <span className="uppercase text-2xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+                Vivadhara Agro
               </span>
             </div>
 

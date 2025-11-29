@@ -16,7 +16,7 @@ export default function Home({ onNavigate }: HomeProps) {
   return (
     <div className="min-h-screen">
       {/* HERO SECTION */}
-      <section className="relative bg-gradient-to-br from-green-50 via-white to-amber-50 pt-24 pb-20">
+      <section className="relative bg-[#FAFDD6] pt-24 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* LEFT TEXT */}
