@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 
 const images = [
-  "https://www.allaboutfeed.net/app/uploads/2020/12/001_75_IMG_dreamstime_m_93691315.jpg",
-  "https://plus.unsplash.com/premium_photo-1661925306592-c355d46e3ace?fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2F0dGxlJTIwZmVlZHxlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000",
-  "https://www.feedipedia.org/sites/default/files/images/maize_grain_01_0.jpg",
-  "https://i.pinimg.com/736x/16/34/79/1634795de1331428b124c2eccd81042e.jpg",
+  "https://res.cloudinary.com/dtjjjyekl/image/upload/v1764416900/vivadhara1_yzwdfu.jpg",
+  "https://res.cloudinary.com/dtjjjyekl/image/upload/v1764416901/vivadhara2_qhotte.jpg",
+  "https://res.cloudinary.com/dtjjjyekl/image/upload/v1764416901/vivadhara4_mfvnaj.jpg",
+  "https://res.cloudinary.com/dtjjjyekl/image/upload/v1764416900/vivadhara3_nkmcth.jpg",
 ];
 
 export default function HeroCarousel() {
