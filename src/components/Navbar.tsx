@@ -13,7 +13,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
   const navItems = [
     { name: "Home", page: "home" },
     { name: "About", page: "about" },
-    { name: "Products", page: "services" },
+    { name: "Products", page: "products" },
     { name: "Testimonials", page: "testimonials" },
     { name: "Contact", page: "contact" },
   ];
@@ -25,7 +25,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
   };
 
   return (
-    <nav className="bg-[#4CAF50] shadow-lg fixed w-full top-0 z-50">
+    <nav className="bg-[#336021] shadow-lg fixed w-full top-0 z-50">    {/* #4CAF50 */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
           {/* LOGO */}
@@ -48,17 +48,21 @@ export default function Navbar({ onNavigate }: NavbarProps) {
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-6">
               {navItems.map((item) => (
-                <button
-                  key={item.page}
-                  onClick={() => handleNavClick(item.page)}
-                  className={`cursor-pointer relative px-3 py-3 text-lg font-medium text-white transition-all ${
-                    activeLink === item.name
-                      ? "text-yellow-300 border-b-2 border-yellow-300"
-                      : "hover:text-yellow-300"
-                  }`}
-                >
-                  {item.name}
-                </button>
+   <button
+  key={item.name}
+  onClick={() => handleNavClick(item.name.toLowerCase())}
+  className={`cursor-pointer relative px-3 py-3 text-lg font-medium transition-all 
+    ${
+      activeLink === item.name
+        ? "text-[#ebc890] border-b-2 border-[#f7daab]"
+        : "text-white border-b-2 border-transparent hover:text-[#f7daab]"
+    }
+  `}
+>
+  {item.name}
+</button>
+
+
               ))}
             </div>
           </div>

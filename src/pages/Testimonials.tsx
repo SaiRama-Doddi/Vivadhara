@@ -54,12 +54,12 @@ export default function Testimonials() {
 
   return (
     <div className="min-h-screen pt-20">
-      <section className="py-20 bg-[#FAFDD6]">
+      <section className="py-20 bg-[#faf0e0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-gray-900 mb-4 italic">
               Client
-              <span className="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent"> Testimonials</span>
+              <span className="bg-[#336021] bg-clip-text text-transparent"> Testimonials</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Don't just take our word for it - hear what our clients have to say
@@ -76,10 +76,10 @@ export default function Testimonials() {
                   <img
                     src={testimonial.image}
                     alt={testimonial.name}
-                    className="w-16 h-16 rounded-full object-cover border-4 border-blue-100"
+                    className="w-16 h-16 rounded-full object-cover border-4 border-[#efd6ad]"
                   />
                   <div className="ml-4">
-                    <h3 className="text-lg font-bold text-gray-900">{testimonial.name}</h3>
+                    <h3 className="text-lg font-bold text-[#336021]">{testimonial.name}</h3>
                     <p className="text-sm text-gray-600">{testimonial.role}</p>
                   </div>
                 </div>
@@ -100,7 +100,7 @@ export default function Testimonials() {
         </div>
       </section>
 
-      <section className="py-16 bg-[#FAFDD6]">
+      <section className="py-16 bg-[#faf0e0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-[#99540f] rounded-2xl p-12 text-center text-[#f2c379]">
             <h2 className="text-3xl font-bold mb-4">Join Our Happy Clients</h2>

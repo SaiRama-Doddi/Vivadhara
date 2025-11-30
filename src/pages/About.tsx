@@ -3,13 +3,13 @@ import { Target, Users, Award, Heart } from 'lucide-react';
 export default function About() {
   return (
     <div className="min-h-screen pt-20">
-      <section className="py-20 bg-[#FAFDD6]">
+      <section className="py-20 bg-[#faf0e0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-5xl font-bold text-gray-900 mb-6 italic">
                 About
-                <span className="block bg-[#99540f] bg-clip-text text-transparent">
+                <span className="pl-4 bg-[#336021] bg-clip-text text-transparent">
                  Vivadhara
                 </span>
               </h1>
@@ -32,7 +32,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-[#FAFDD6]">
+      <section className="py-20 bg-[#faf0e0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Core Values</h2>
@@ -83,7 +83,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-[#FAFDD6]">
+      <section className="py-20 bg-[#faf0e0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>

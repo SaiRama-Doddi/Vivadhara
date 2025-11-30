@@ -62,8 +62,8 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
 
   return (
     <div className="fixed inset-0 bg-black/10 backdrop-blur-sm bg-opacity-50 z-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden flex flex-col">
-        <div className="bg-gradient-to-r from-blue-600 to-green-600 text-white p-6 flex items-center justify-between">
+      <div className="bg-[#faf0e0] rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden flex flex-col">
+        <div className="bg-[#336021] text-white p-6 flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <ShoppingBag size={28} />
             <h2 className="text-2xl font-bold">
@@ -220,7 +220,7 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
                 </button>
                 <button
                   type="submit"
-                  className="cursor-pointer flex-1 bg-linear-to-r from-blue-600 to-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300"
+                  className="cursor-pointer flex-1 bg-[#336021] text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300"
                 >
                   Send to WhatsApp
                 </button>
@@ -239,7 +239,7 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
             </div>
             <button
               onClick={handleCheckout}
-              className="w-full bg-gradient-to-r from-blue-600 to-green-600 text-white px-6 py-4 rounded-lg font-semibold hover:shadow-xl transition-all duration-300"
+              className="w-full bg-[#336021] cursor-pointer text-white px-6 py-4 rounded-lg font-semibold hover:shadow-xl transition-all duration-300"
             >
               Proceed to Checkout
             </button>

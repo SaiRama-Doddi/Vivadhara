@@ -60,7 +60,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         {/* Foreground content */}
         <div className="relative z-20 flex flex-col justify-center items-center text-center h-full px-6">
           <div className="p-8 rounded-3xl max-w-2xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-snug text-[#fbebd5] drop-shadow-lg">
+            <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-snug text-white drop-shadow-lg italic">
               High-Protein <br />
               <span className="text-white">Organic Feed</span>
             </h1>
@@ -77,7 +77,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <button
                 onClick={() => onNavigate("services")}
-                className="bg-gradient-to-r from-blue-600 to-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center space-x-2"
+                className="bg-[#336021] text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center space-x-2"
               >
                 <span className="text-lg cursor-pointer text-md">
                   Explore Products
@@ -111,10 +111,10 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       </section>
 
       {/* ---------------- WHY CHOOSE US ---------------- */}
-      <section className="py-20 bg-[#FAFDD6]">
+      <section className="py-20 bg-[#faf0e0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-[#336021] mb-4">
               Why Farmers Trust Us
             </h2>
             <p className="text-xl text-gray-600">
@@ -129,7 +129,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                 <Wheat className="text-green-700" size={32} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Organic Ingredients
+                Green Energy’s bio-products
               </h3>
               <p className="text-gray-600">
                 Natural, high-protein feed enhancing growth, immunity & overall
@@ -190,7 +190,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 
     <button
       onClick={() => onNavigate('contact')}
-      className="bg-white text-green-700 cursor-pointer px-8 py-4 rounded-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300"
+      className="bg-white text-green-700   cursor-pointer px-8 py-4 rounded-lg font-bold hover:shadow-2xl hover:scale-105 transition-all duration-300"
     >
       Contact Us Today
     </button>
@@ -199,12 +199,12 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 
 
 {/* ---------------- WHAT MAKES US DIFFERENT ---------------- */}
-<section className="py-20 bg-[#F7FBEF]">
+<section className="py-20 bg-[#faf0e0]">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <div className="text-center mb-16">
-      <h2 className="text-4xl font-bold text-gray-900">
-        What Makes <span className="text-green-600">Vivadhara Agro</span> Different?
+      <h2 className="text-4xl font-bold text-gray-900 italic">
+        What Makes <span className="text-[#336021]">Vivadhara Agro</span> Different?
       </h2>
       <p className="text-lg text-gray-600 mt-3">
         Premium feed ingredients backed with trust, quality & consistency.

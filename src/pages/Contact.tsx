@@ -29,12 +29,12 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen pt-20">
-      <section className="py-20 bg-[#d8d1bd]">
+      <section className="py-20 bg-[#faf0e0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-gray-900 mb-4 italic">
               Get in
-              <span className="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent"> Touch</span>
+              <span className="bg-[#336021] bg-clip-text text-transparent"> Touch</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Have a question or want to work together? We'd love to hear from you
@@ -48,8 +48,8 @@ export default function Contact() {
 
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
-                    <div className="bg-blue-100 p-3 rounded-lg">
-                      <Mail className="text-blue-600" size={24} />
+                    <div className="bg-green-100 p-3 rounded-lg">
+                      <Mail className="text-green-600" size={24} />
                     </div>
                     <div>
                       <p className="font-semibold text-gray-900">Email</p>
@@ -70,8 +70,8 @@ export default function Contact() {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="bg-blue-100 p-3 rounded-lg">
-                      <MapPin className="text-blue-600" size={24} />
+                    <div className="bg-green-100 p-3 rounded-lg">
+                      <MapPin className="text-green-600" size={24} />
                     </div>
                     <div>
                       <p className="font-semibold text-gray-900">Office</p>
@@ -82,7 +82,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-blue-600 to-green-600 p-8 rounded-xl text-white">
+              <div className="bg-gradient-to-r from-[#336021] to-green-600 p-8 rounded-xl text-white">
                 <h3 className="text-2xl font-bold mb-4">Business Hours</h3>
                 <div className="space-y-2">
                   <div className="flex justify-between">
@@ -192,7 +192,7 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-blue-600 to-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2"
+                  className="w-full bg-[#336021] cursor-pointer text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2"
                 >
                   <span>Send Message</span>
                   <Send size={20} />

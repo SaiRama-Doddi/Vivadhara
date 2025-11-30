@@ -102,7 +102,7 @@ export default function Footer({ onCartClick }: FooterProps) {
       {/* FLOATING CART BUTTON */}
       <button
         onClick={onCartClick}
-        className="fixed bottom-6 right-6 bg-gradient-to-r from-blue-500 to-green-500 text-white p-4 rounded-full shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-110 z-50"
+        className="fixed bottom-6 right-6 bg-[#336021] cursor-pointer text-white p-4 rounded-full shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-110 z-50"
         aria-label="Shopping Cart"
       >
         <ShoppingCart size={24} />

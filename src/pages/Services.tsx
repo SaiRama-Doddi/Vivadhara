@@ -15,12 +15,12 @@ export default function Services({ onNavigate }: ServicesProps) {
 
   return (
     <div className="min-h-screen pt-20">
-      <section className="py-20 bg-[#FAFDD6]">
+      <section className="py-20 bg-[#faf0e0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-gray-900 mb-4 italic">
               Our
-              <span className="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent"> Products</span>
+              <span className="bg-[#336021] bg-clip-text text-transparent"> Products</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Comprehensive digital solutions tailored to your business needs
@@ -46,7 +46,7 @@ export default function Services({ onNavigate }: ServicesProps) {
 
                 <div className="p-6">
                   <div className="mb-2">
-                    <span className="inline-block bg-blue-100 text-blue-600 text-xs font-semibold px-3 py-1 rounded-full">
+                    <span className="inline-block bg-[#faf0e0] text-[#336021] text-xs font-semibold px-3 py-1 rounded-full">
                       {product.category}
                     </span>
                   </div>
@@ -61,14 +61,14 @@ export default function Services({ onNavigate }: ServicesProps) {
                       className="flex-1 bg-gray-100 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-all duration-300 flex items-center justify-center space-x-2"
                     >
                       <Eye size={20} />
-                      <span>View More</span>
+                      <span className="hidden md:inline">View More</span>
                     </button>
                     <button
                       onClick={() => handleAddToCart(product)}
-                      className="flex-1 bg-gradient-to-r from-blue-600 to-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2"
+                      className="flex-1 bg-[#336021] text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2"
                     >
                       <ShoppingCart size={20} />
-                      <span>Add to Cart</span>
+                      <span className="hidden md:inline">Add to Cart</span>
                     </button>
                   </div>
                 </div>
@@ -88,7 +88,7 @@ export default function Services({ onNavigate }: ServicesProps) {
           </p>
           <button
             onClick={() => onNavigate('contact')}
-            className="bg-gradient-to-r from-blue-600 to-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300"
+            className="bg-[#336021] cursor-pointer text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300"
           >
             Contact Us
           </button>

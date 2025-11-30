@@ -29,7 +29,7 @@ function App() {
         return <Home onNavigate={handleNavigation} />;
       case 'about':
         return <About />;
-      case 'services':
+      case 'products':
         return <Services onNavigate={handleNavigation} />;
       case 'product-detail':
         return <ProductDetail productId={selectedProductId} onNavigate={handleNavigation} />;
