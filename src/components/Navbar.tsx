@@ -38,9 +38,14 @@ export default function Navbar({ onNavigate }: NavbarProps) {
               alt="Logo"
               className="w-18 h-18 rounded-full shadow-xl object-cover border-2 border-[#4caf50]"
             />
-           <span className="text-xl sm:text-2xl md:text-3xl font-semibold text-white uppercase">
+       <span
+  className="text-xl sm:text-2xl md:text-3xl font-bold uppercase 
+             bg-gradient-to-b from-green-400 to-blue-600 bg-clip-text text-transparent"
+  style={{ fontFamily: "AVANT GARDE" }}
+>
   Vivadhara Agro
 </span>
+
 
           </div>
 

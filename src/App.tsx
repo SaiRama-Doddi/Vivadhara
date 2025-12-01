@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { CartProvider } from './context/CartContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import CartModal from './components/CartModal';
 import Home from './components/Home';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -13,7 +12,7 @@ import Contact from './pages/Contact';
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [selectedProductId, setSelectedProductId] = useState<string>('');
-  const [isCartOpen, setIsCartOpen] = useState(false);
+
 
   const handleNavigation = (page: string, productId?: string) => {
     setCurrentPage(page);
@@ -44,11 +43,17 @@ function App() {
 
   return (
     <CartProvider>
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-[#faf0e0]">
         <Navbar currentPage={currentPage} onNavigate={handleNavigation} />
+     
+  
         <main>{renderPage()}</main>
-        <Footer onCartClick={() => setIsCartOpen(true)} />
-        <CartModal isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
+      {/* SHOW SERVICES ONLY ON HOME PAGE */}
+        {currentPage === "home" && (
+          <Services onNavigate={handleNavigation} />
+        )}
+        <Footer  />
+  
       </div>
     </CartProvider>
   );

@@ -1,209 +1,138 @@
 import { useState } from "react";
-import { ArrowLeft, ShoppingCart, Trash2, Check } from "lucide-react";
+import { ArrowLeft, ShoppingBag, Check } from "lucide-react";
 import { products } from "../data/products";
-import { useCart } from "../context/CartContext";
+import OrderModal from "./OrderModal";
 
 interface ProductDetailProps {
-  productId: string;
+  productId: string | number;
   onNavigate: (page: string) => void;
 }
 
 export default function ProductDetail({ productId, onNavigate }: ProductDetailProps) {
   const product = products.find((p) => p.id === productId);
   const [selectedImage, setSelectedImage] = useState(0);
-  const { cart, addToCart, removeFromCart } = useCart();
-  const [showAdded, setShowAdded] = useState(false);
+  const [showOrderModal, setShowOrderModal] = useState(false);
 
-  if (!product) {
-    return (
-      <div className="min-h-screen pt-20 flex items-center justify-center">
-        <div className="text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Product not found</h2>
-          <button
-            onClick={() => onNavigate("services")}
-            className="text-blue-600 hover:text-blue-700 font-semibold"
-          >
-            Back to Services
-          </button>
-        </div>
-      </div>
-    );
-  }
-
-  const isInCart = cart.some(
-    (item: { product: { id: string } }) => item.product.id === product.id
-  );
-
-  const handleAddToCart = () => {
-    addToCart(product);
-    setShowAdded(true);
-    setTimeout(() => setShowAdded(false), 2000);
-  };
-
-  const handleRemoveFromCart = () => {
-    removeFromCart(product.id);
-  };
+  if (!product) return null;
 
   return (
     <div className="min-h-screen pt-20 bg-[#faf0e0]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
 
-        {/* BACK BUTTON */}
+        {/* Back Button */}
         <button
           onClick={() => onNavigate("services")}
-          className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 mb-6 transition-colors"
+          className="flex items-center text-gray-600 hover:text-blue-600 space-x-2 mb-4 sm:mb-6 cursor-pointer"
         >
           <ArrowLeft size={20} />
-          <span className="cursor-pointer font-medium">Back to Services</span>
+          <span className="text-sm sm:text-base">Back to Services</span>
         </button>
 
-        {/* CARD */}
-        <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+        {/* PRODUCT CARD */}
+        <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-6 md:p-10 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
 
-          {/* RESPONSIVE GRID */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-6 sm:p-8">
+          {/* LEFT IMAGES */}
+          <div className="space-y-4">
+            {/* MAIN IMAGE */}
+            <div className="w-full h-64 sm:h-80 md:h-96 rounded-xl overflow-hidden shadow-sm">
+              <img
+                src={product.images[selectedImage]}
+                alt={product.name}
+                className="w-full h-full object-cover"
+              />
+            </div>
 
-            {/* ================= LEFT COLUMN ================= */}
-            <div className="space-y-8">
+            {/* THUMBNAILS */}
+            <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-gray-300">
+              {product.images.map((img, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setSelectedImage(idx)}
+                  className={`min-w-[70px] sm:min-w-[90px] h-20 sm:h-24 rounded-lg overflow-hidden border-2 transition-all ${
+                    selectedImage === idx
+                      ? "border-green-600 scale-105"
+                      : "border-gray-300 hover:border-gray-400"
+                  }`}
+                >
+                  <img
+                    src={img}
+                    alt="thumbnail"
+                    className="w-full h-full object-cover"
+                  />
+                </button>
+              ))}
+            </div>
+          </div>
 
-              {/* MAIN IMAGE */}
-              <div className="rounded-xl overflow-hidden shadow-sm">
-                <img
-                  src={product.images[selectedImage]}
-                  alt={product.name}
-                  className="w-full h-80 sm:h-96 object-cover rounded-xl"
-                />
-              </div>
+          {/* RIGHT CONTENT */}
+          <div className="space-y-6">
+            {/* CATEGORY */}
+            <span className="inline-block bg-green-100 text-green-800 text-xs sm:text-sm px-4 py-1 rounded-full font-semibold">
+              {product.category}
+            </span>
 
-              {/* HORIZONTAL GALLERY */}
-              <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-gray-300">
-                {product.images.map((image, index) => (
-                  <button
+            {/* TITLE */}
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+              {product.name}
+            </h1>
+
+            {/* DESCRIPTION */}
+            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+              {product.description}
+            </p>
+
+            {/* FEATURES */}
+            <div>
+              <h2 className="text-lg sm:text-xl font-semibold mb-3">
+                Key Features
+              </h2>
+
+              <div className="space-y-2">
+                {product.features.map((feature, index) => (
+                  <div
                     key={index}
-                    onClick={() => setSelectedImage(index)}
-                    className={`min-w-[90px] sm:min-w-[120px] h-20 sm:h-24 rounded-lg overflow-hidden border-2 transition-all ${
-                      selectedImage === index
-                        ? "border-green-600 scale-105"
-                        : "border-gray-200 hover:border-gray-300"
-                    }`}
+                    className="flex items-center text-sm sm:text-base space-x-2"
                   >
-                    <img
-                      src={image}
-                      alt={`${product.name} ${index + 1}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </button>
+                    <Check className="text-green-600 min-w-[20px]" size={20} />
+                    <span className="text-gray-700 font-medium">
+                      {feature}
+                    </span>
+                  </div>
                 ))}
-              </div>
-
-              {/* SPECIFICATIONS */}
-              <div>
-                <h2 className="text-xl font-semibold text-gray-900 mb-3">Specifications</h2>
-
-                <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 sm:p-5 shadow-sm">
-                  <ul className="divide-y">
-                    {Object.entries(product.specs).map(([key, value]) => (
-                      <li key={key} className="py-3 flex flex-col sm:flex-row sm:justify-between">
-                        <span className="text-gray-900 font-semibold capitalize">
-                          {key.replace(/([A-Z])/g, " $1")}
-                        </span>
-                        <span className="text-gray-600">{value}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
               </div>
             </div>
 
-            {/* ================= RIGHT COLUMN ================= */}
-            <div className="flex flex-col space-y-6">
+            {/* BUTTONS */}
+            <div className="space-y-3 pt-2">
+              {/* PLACE ORDER */}
+              <button
+                onClick={() => setShowOrderModal(true)}
+                className="w-full cursor-pointer bg-gradient-to-r from-yellow-600 to-green-600 text-white py-3 sm:py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 shadow-md hover:opacity-90 transition-all text-sm sm:text-base"
+              >
+                <ShoppingBag size={22} />
+                <span>Place Order</span>
+              </button>
 
-              {/* CATEGORY */}
-              <span className="inline-block bg-green-100 text-green-700 text-sm font-semibold px-4 py-2 rounded-full w-max">
-                {product.category}
-              </span>
-
-              {/* TITLE */}
-              <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">{product.name}</h1>
-
-              {/* DESCRIPTION */}
-              <div>
-                <h2 className="text-xl font-semibold text-gray-900 mb-3">Description</h2>
-                <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
-                  {product.description}
-                </p>
-              </div>
-
-              {/* USES */}
-              <div>
-                <h2 className="text-xl font-semibold text-gray-900 mb-3">Suitable For</h2>
-                <div className="flex flex-wrap gap-3">
-                  {product.uses.map((use, i) => (
-                    <span
-                      key={i}
-                      className="bg-green-50 border border-green-200 text-green-700 px-4 py-2 rounded-full text-xs sm:text-sm font-medium"
-                    >
-                      {use}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* FEATURES */}
-              <div>
-                <h2 className="text-xl font-semibold text-gray-900 mb-3">Key Features</h2>
-                <div className="space-y-3">
-                  {product.features.map((feature, i) => (
-                    <div key={i} className="flex items-center space-x-3">
-                      <Check className="text-green-600" size={20} />
-                      <span className="text-gray-700 text-sm sm:text-base font-medium">
-                        {feature}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* ACTION BUTTONS */}
-              <div className="pt-4 space-y-3">
-
-                {!isInCart ? (
-                  <button
-                    onClick={handleAddToCart}
-                    className="cursor-pointer w-full bg-gradient-to-r from-yellow-600 to-green-600 text-white px-6 py-4 rounded-lg font-semibold hover:opacity-90 transition flex items-center justify-center space-x-2 shadow-md"
-                  >
-                    <ShoppingCart size={24} />
-                    <span>Add to Cart</span>
-                  </button>
-                ) : (
-                  <button
-                    onClick={handleRemoveFromCart}
-                    className="cursor-pointer w-full bg-red-600 text-white px-6 py-4 rounded-lg font-semibold hover:bg-red-700 transition flex items-center justify-center space-x-2 shadow-md"
-                  >
-                    <Trash2 size={24} />
-                    <span>Remove from Cart</span>
-                  </button>
-                )}
-
-                <button
-                  onClick={() => onNavigate("services")}
-                  className="w-full border-2 border-gray-300 text-gray-700 px-6 py-4 rounded-lg font-semibold hover:bg-gray-50 transition"
-                >
-                  Continue Shopping
-                </button>
-              </div>
+              {/* Continue Shopping */}
+              <button
+                onClick={() => onNavigate("services")}
+                className="w-full border border-gray-300 text-gray-700 py-3 sm:py-4 rounded-lg font-semibold hover:bg-gray-100 transition text-sm sm:text-base cursor-pointer"
+              >
+                Continue Shopping
+              </button>
             </div>
           </div>
         </div>
-
-        {/* ADDED TO CART TOAST */}
-        {showAdded && (
-          <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-6 py-3 rounded-lg shadow-xl flex items-center space-x-2 animate-bounce z-50">
-            <Check size={20} />
-            <span className="font-semibold text-sm">Added to cart successfully!</span>
-          </div>
-        )}
       </div>
+
+      {/* ORDER MODAL */}
+      {showOrderModal && (
+        <OrderModal
+          isOpen={showOrderModal}
+          onClose={() => setShowOrderModal(false)}
+          product={product}
+        />
+      )}
     </div>
   );
 }

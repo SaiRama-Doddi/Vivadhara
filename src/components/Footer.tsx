@@ -1,13 +1,31 @@
-import { ShoppingCart, Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
-import { useCart } from '../context/CartContext';
+import {  Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
 
-interface FooterProps {
-  onCartClick: () => void;
-}
+import { useState,useEffect } from 'react';
 
-export default function Footer({ onCartClick }: FooterProps) {
-  const { getTotalItems } = useCart();
-  const itemCount = getTotalItems();
+
+
+export default function Footer() {
+
+ 
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+  const handleScroll = () => {
+    setShowScrollTop(window.scrollY > 300); // show after 300px
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
+
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+};
+
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -99,19 +117,26 @@ export default function Footer({ onCartClick }: FooterProps) {
         </div>
       </div>
 
-      {/* FLOATING CART BUTTON */}
-      <button
-        onClick={onCartClick}
-        className="fixed bottom-6 right-6 bg-[#336021] cursor-pointer text-white p-4 rounded-full shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-110 z-50"
-        aria-label="Shopping Cart"
-      >
-        <ShoppingCart size={24} />
-        {itemCount > 0 && (
-          <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">
-            {itemCount}
-          </span>
-        )}
-      </button>
+    {/* FLOATING SCROLL TO TOP BUTTON */}
+{showScrollTop && (
+  <button
+    onClick={scrollToTop}
+    className="fixed bottom-10 right-6 bg-[#336021] cursor-pointer text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 z-50"
+    aria-label="Scroll to Top"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={4}
+      stroke="white"
+      className="w-6 h-6"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+)}
+
     </footer>
   );
 }
