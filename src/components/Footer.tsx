@@ -39,7 +39,7 @@ const scrollToTop = () => {
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-15 h-15 rounded-lg flex items-center justify-center">
                 <img
-                  src="/vivadhara.jpg"
+                 src="/logo.png"
                   alt="Logo"
                   className="w-15 h-15 rounded-full shadow-md object-cover"
                 />
