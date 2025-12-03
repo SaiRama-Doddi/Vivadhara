@@ -40,7 +40,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
             />
        <span
   className="text-xl sm:text-2xl md:text-3xl font-bold uppercase 
-             bg-gradient-to-l from-green-400 to-blue-600 bg-clip-text text-transparent"
+             bg-yellow-400 bg-clip-text text-transparent"
 /*   style={{ fontFamily: "AVANT GARDE" }} */
 >
   Vivadhara Agro
