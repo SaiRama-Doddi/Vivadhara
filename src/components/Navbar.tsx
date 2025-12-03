@@ -34,9 +34,9 @@ export default function Navbar({ onNavigate }: NavbarProps) {
             onClick={() => handleNavClick("home")}
           >
             <img
-              src="/vivadhara.jpg"
+              src="/logo.png"
               alt="Logo"
-              className="w-16 h-16 rounded-full shadow-xl object-cover"
+              className="w-16 h-16 rounded-full  object-cover"
             />
        <span
   className="text-xl sm:text-2xl md:text-3xl font-bold uppercase 
