@@ -36,12 +36,12 @@ export default function Navbar({ onNavigate }: NavbarProps) {
             <img
               src="/vivadhara.jpg"
               alt="Logo"
-              className="w-18 h-18 rounded-full shadow-xl object-cover border-2 border-[#4caf50]"
+              className="w-16 h-16 rounded-full shadow-xl object-cover"
             />
        <span
   className="text-xl sm:text-2xl md:text-3xl font-bold uppercase 
-             bg-gradient-to-b from-green-400 to-blue-600 bg-clip-text text-transparent"
-  style={{ fontFamily: "AVANT GARDE" }}
+             bg-gradient-to-l from-green-400 to-blue-600 bg-clip-text text-transparent"
+/*   style={{ fontFamily: "AVANT GARDE" }} */
 >
   Vivadhara Agro
 </span>

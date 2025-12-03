@@ -51,7 +51,7 @@ export const products: Product[] = [
     name: "Mixed DDGS (Maize + Rice) – 35% Protein",
     category: "High-Protein Feed",
     shortDescription:
-      "Balanced 35% protein Mixed DDGS formulated using maize and rice for superior livestock nutrition.",
+      "Balanced 35% protein Mixed DDGS using maize and rice for superior livestock nutrition.",
     description:
       `The 35% Protein Mixed DDGS blend is a nutrient-dense combination of maize and rice DDGS. This mix delivers a balanced amino acid profile, high digestibility, and excellent energy value. It is widely used as an economical, versatile feed ingredient that improves growth rate, supports better FCR, and enhances milk yield. Ideal for poultry, cattle, swine, and aquaculture feed formulations.`,
     specs: {

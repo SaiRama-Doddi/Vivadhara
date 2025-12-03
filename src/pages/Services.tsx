@@ -1,4 +1,4 @@
-import { Eye, ShoppingBag } from 'lucide-react';
+
 import { products } from '../data/products';
 import { useState } from 'react';
 import OrderModal from './OrderModal';
@@ -36,52 +36,62 @@ export default function Services({ onNavigate }: ServicesProps) {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-8 place-items-center">
             {products.map((product) => (
-              <div
-                key={product.id}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
-              >
-                <div className="relative h-70 overflow-hidden">
-                  <img
-                    src={product.images[0]}
-                    alt={product.name}
-                    className="w-full h-full object-cover"
-                  />
-                  {/* <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-green-600 text-white px-4 py-2 rounded-full font-bold">
-                    ${product.price}
-                  </div> */}
-                </div>
+             <div
+  key={product.id}
+  className="bg-white w-[300px] rounded-2xl shadow-md overflow-hidden 
+             hover:shadow-xl transition-all duration-300"
+>
+  {/* IMAGE + BADGE */}
+  <div className="relative h-[200px] overflow-hidden rounded-t-2xl">
+    <img
+      src={product.images[0]}
+      alt={product.name}
+      className="w-full h-full object-cover"
+    />
 
-                <div className="p-6">
-                  <div className="mb-2">
-                    <span className="inline-block bg-[#faf0e0] text-[#336021] text-xs font-semibold px-3 py-1 rounded-full">
-                      {product.category}
-                    </span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{product.name}</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    {product.shortDescription}
-                  </p>
+    {/* Fresh Badge */}
+    <span className="absolute top-3 right-3 bg-[#336021] text-white text-xs font-semibold px-3 py-1 rounded-full">
+      Fresh
+    </span>
+  </div>
 
-                  <div className="flex space-x-3">
-                    <button
-                      onClick={() => onNavigate('product-detail', product.id)}
-                      className="flex-1 bg-gray-100 cursor-pointer text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-all duration-300 flex items-center justify-center space-x-2"
-                    >
-                      <Eye size={20} />
-                      <span className="hidden md:inline">View More</span>
-                    </button>
-                    <button
-                      onClick={() => handlePlaceOrder(product)}
-                      className="flex-1 bg-[#336021] cursor-pointer text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2"
-                    >
-                      <ShoppingBag size={20} />
-                      <span className="hidden md:inline">Place Order</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
+  {/* CONTENT */}
+  <div className="p-5">
+    <h3 className="text-lg font-semibold text-gray-900">
+      {product.name}
+    </h3>
+
+    <p className="text-gray-500 text-sm mt-1">
+      {product.shortDescription}
+    </p>
+
+  
+    {/* BUTTONS */}
+    <div className="flex items-center justify-between mt-4 gap-3">
+      
+      {/* View Button */}
+      <button
+        onClick={() => onNavigate("product-detail", product.id)}
+        className="w-full border border-gray-300 text-gray-700 py-2 rounded-lg 
+                   hover:bg-gray-100 transition font-medium cursor-pointer"
+      >
+        View
+      </button>
+
+      {/* Add Button */}
+      <button
+        onClick={() => handlePlaceOrder(product)}
+        className="w-full bg-[#336021] text-white py-2 rounded-lg font-medium 
+                   hover:bg-[#41782c] transition cursor-pointer"
+      >
+        Place Order
+      </button>
+    </div>
+  </div>
+</div>
+
             ))}
           </div>
         </div>
