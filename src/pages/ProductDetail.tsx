@@ -21,7 +21,7 @@ export default function ProductDetail({ productId, onNavigate }: ProductDetailPr
 
         {/* Back Button */}
         <button
-          onClick={() => onNavigate("services")}
+          onClick={() => onNavigate("products")}
           className="flex items-center text-gray-600 hover:text-blue-600 space-x-2 mb-4 sm:mb-6 cursor-pointer"
         >
           <ArrowLeft size={20} />
