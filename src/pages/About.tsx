@@ -13,11 +13,20 @@ export default function About() {
                  Vivadhara
                 </span>
               </h1>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                We are a passionate team of designers, developers, and digital strategists committed to delivering exceptional digital solutions that drive real business results.
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed text-justify">
+Vivadhara Agro is a trusted supplier of premium-quality cattle feed raw materials, dedicated to supporting dairy farms, feed manufacturers, and livestock businesses with reliable and nutrition-rich ingredients.
+
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Since our founding, we've helped hundreds of businesses establish their online presence and achieve their digital goals through innovative design and cutting-edge technology.
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed text-justify">
+Our mission is simple — to deliver clean, safe, and consistent raw materials that improve animal health, enhance milk yield, and promote sustainable farming practices.
+              </p>
+               <p className="text-lg text-gray-600 mb-6 leading-relaxed text-justify">
+
+With strong networks across distillery units, ethanol plants, flour mills, oil mills, processing centers, and agro hubs, Vivadhara Agro ensures timely delivery, transparent pricing, strict quality checks, and dependable service for every customer.
+
+              </p>
+               <p className="text-lg text-gray-600 leading-relaxed text-justify">
+Since our inception, we have been committed to empowering farmers and feed producers with better nutrition, better quality, and greater value. At Vivadhara Agro, quality and trust always come first.
               </p>
             </div>
 
