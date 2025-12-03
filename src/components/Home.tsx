@@ -74,7 +74,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <button
                 onClick={() => onNavigate("products")}
-                className="bg-[#336021] text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center space-x-2"
+                className="bg-[#249915] text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center space-x-2"
               >
                 <span className="text-lg cursor-pointer text-md">
                   Explore Products

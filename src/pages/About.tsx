@@ -3,29 +3,29 @@ import { Target, Users, Award, Heart } from 'lucide-react';
 export default function About() {
   return (
     <div className="min-h-screen pt-20">
-      <section className="py-20 bg-[#faf0e0]">
+      <section className="py-20 bg-[#FAFDD6]">  {/*    #faf0e0 */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-5xl font-bold text-gray-900 mb-6 italic">
+              <h1 className="text-3xl md:text-5xl lg:text-5xl font-bold text-gray-900 mb-6 italic">
                 About
-                <span className="pl-4 bg-[#336021] bg-clip-text text-transparent">
+                <span className="pl-4 bg-[#249915] bg-clip-text text-transparent">
                  Vivadhara
                 </span>
               </h1>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed text-justify">
+              <p className="text-md md:text-xl text-gray-600 mb-6 leading-relaxed text-justify">
 Vivadhara Agro is a trusted supplier of premium-quality cattle feed raw materials, dedicated to supporting dairy farms, feed manufacturers, and livestock businesses with reliable and nutrition-rich ingredients.
 
               </p>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed text-justify">
+              <p className="text-md md:text-xl text-gray-600 mb-6 leading-relaxed text-justify">
 Our mission is simple — to deliver clean, safe, and consistent raw materials that improve animal health, enhance milk yield, and promote sustainable farming practices.
               </p>
-               <p className="text-lg text-gray-600 mb-6 leading-relaxed text-justify">
+               <p className="text-md md:text-xl text-gray-600 mb-6 leading-relaxed text-justify">
 
 With strong networks across distillery units, ethanol plants, flour mills, oil mills, processing centers, and agro hubs, Vivadhara Agro ensures timely delivery, transparent pricing, strict quality checks, and dependable service for every customer.
 
               </p>
-               <p className="text-lg text-gray-600 leading-relaxed text-justify">
+               <p className="text-md md:text-xl text-gray-600 leading-relaxed text-justify">
 Since our inception, we have been committed to empowering farmers and feed producers with better nutrition, better quality, and greater value. At Vivadhara Agro, quality and trust always come first.
               </p>
             </div>
@@ -41,7 +41,7 @@ Since our inception, we have been committed to empowering farmers and feed produ
         </div>
       </section>
 
-      <section className="py-20 bg-[#faf0e0]">
+      <section className="py-20 bg-[#FAFDD6]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Core Values</h2>
@@ -92,7 +92,7 @@ Since our inception, we have been committed to empowering farmers and feed produ
         </div>
       </section>
 
-      <section className="py-20 bg-[#faf0e0]">
+      <section className="py-20 bg-[#FAFDD6]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>

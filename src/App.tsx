@@ -43,7 +43,7 @@ function App() {
 
   return (
     <CartProvider>
-      <div className="min-h-screen bg-[#faf0e0]">
+      <div className="min-h-screen bg-[#FAFDD6]">
         <Navbar currentPage={currentPage} onNavigate={handleNavigation} />
      
   

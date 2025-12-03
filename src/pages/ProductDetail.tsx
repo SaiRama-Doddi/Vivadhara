@@ -16,7 +16,7 @@ export default function ProductDetail({ productId, onNavigate }: ProductDetailPr
   if (!product) return null;
 
   return (
-    <div className="min-h-screen pt-20 bg-[#faf0e0]">
+    <div className="min-h-screen pt-20 bg-[#FAFDD6]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
 
         {/* Back Button */}

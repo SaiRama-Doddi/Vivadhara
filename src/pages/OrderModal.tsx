@@ -55,7 +55,7 @@ export default function OrderModal({ isOpen, onClose, product }: ProceedOrderMod
 
   return (
     <div className="fixed inset-0 bg-black/10 backdrop-blur-sm bg-opacity-50 z-50 flex items-center justify-center p-4">
-      <div className="bg-[#faf0e0] rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden flex flex-col">
+      <div className="bg-[#FAFDD6] rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden flex flex-col">
 
         {/* HEADER */}
         <div className="bg-[#336021] text-white p-6 flex items-center justify-between">

@@ -24,14 +24,14 @@ export default function Services({ onNavigate }: ServicesProps) {
 
   return (
     <div className="min-h-screen pt-20">
-      <section className="py-5 bg-[#faf0e0]">
+      <section className="py-5 bg-[#FAFDD6]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-gray-900 mb-4 italic">
+            <h1 className="text-3xl sm:text-3xl md:text-5xl font-bold text-gray-900 mb-4 italic">
               Our
-              <span className="bg-[#336021] bg-clip-text text-transparent"> Products</span>
+              <span className="bg-[#249915] bg-clip-text text-transparent"> Products</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-md md:text-xl text-gray-600 max-w-2xl mx-auto">
               Comprehensive digital solutions tailored to your business needs
             </p>
           </div>
@@ -52,9 +52,9 @@ export default function Services({ onNavigate }: ServicesProps) {
     />
 
     {/* Fresh Badge */}
-    <span className="absolute top-3 right-3 bg-[#336021] text-white text-xs font-semibold px-3 py-1 rounded-full">
+   {/*  <span className="absolute top-3 right-3 bg-[#336021] text-white text-xs font-semibold px-3 py-1 rounded-full">
       Fresh
-    </span>
+    </span> */}
   </div>
 
   {/* CONTENT */}
@@ -74,7 +74,7 @@ export default function Services({ onNavigate }: ServicesProps) {
       {/* View Button */}
       <button
         onClick={() => onNavigate("product-detail", product.id)}
-        className="w-full border border-gray-300 text-gray-700 py-2 rounded-lg 
+        className="w-full border border-[#4cb20d] text-gray-700 py-2 rounded-lg 
                    hover:bg-gray-100 transition font-medium cursor-pointer"
       >
         View
@@ -83,8 +83,8 @@ export default function Services({ onNavigate }: ServicesProps) {
       {/* Add Button */}
       <button
         onClick={() => handlePlaceOrder(product)}
-        className="w-full bg-[#336021] text-white py-2 rounded-lg font-medium 
-                   hover:bg-[#41782c] transition cursor-pointer"
+        className="w-full bg-[#249915] text-white py-2 rounded-lg font-medium 
+                   hover:bg-[#4caf19] transition cursor-pointer"
       >
         Place Order
       </button>
@@ -107,7 +107,7 @@ export default function Services({ onNavigate }: ServicesProps) {
           </p>
           <button
             onClick={() => onNavigate('contact')}
-            className="bg-[#336021] cursor-pointer text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300"
+            className="bg-[#249915] cursor-pointer text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300"
           >
             Contact Us
           </button>
@@ -128,7 +128,7 @@ export default function Services({ onNavigate }: ServicesProps) {
       <section className="py-20 bg-[#faf0e0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#336021] mb-4">
+            <h2 className="text-4xl font-bold text-[#249915] mb-4">
               Why Farmers Trust Us
             </h2>
             <p className="text-xl text-gray-600">

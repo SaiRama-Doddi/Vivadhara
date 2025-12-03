@@ -45,14 +45,14 @@ Message: ${formData.message}
 
   return (
     <div className="min-h-screen pt-20">
-      <section className="py-20 bg-[#faf0e0]">
+      <section className="py-20 bg-[#FAFDD6]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-gray-900 mb-4 italic">
+            <h1 className="text-3xl md:text-5xl lg:text-5xl font-bold text-gray-900 mb-4 italic">
               Get in
-              <span className="bg-[#336021] bg-clip-text text-transparent"> Touch</span>
+              <span className="bg-[#249915] bg-clip-text text-transparent"> Touch</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-md md:text-xl text-gray-600 max-w-2xl mx-auto">
               Have a question or want to work together? We'd love to hear from you
             </p>
           </div>
@@ -208,7 +208,7 @@ Message: ${formData.message}
 
                 <button
                   type="submit"
-                  className="w-full bg-[#336021] cursor-pointer text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2"
+                  className="w-full bg-[#249915] cursor-pointer text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2"
                 >
                   <span>Send Message</span>
                   <Send size={20} />

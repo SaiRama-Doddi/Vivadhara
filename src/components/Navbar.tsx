@@ -25,7 +25,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
   };
 
   return (
-    <nav className="bg-[#336021] shadow-lg fixed w-full top-0 z-50">    {/* #4CAF50 */}
+    <nav className="bg-[#249915] shadow-lg fixed w-full top-0 z-50">    {/* #4CAF50 */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
           {/* LOGO */}
@@ -34,9 +34,9 @@ export default function Navbar({ onNavigate }: NavbarProps) {
             onClick={() => handleNavClick("home")}
           >
             <img
-              src="/logo.png"
+              src="/vivadhara.jpg"
               alt="Logo"
-              className="w-16 h-16 rounded-full  object-cover"
+              className="w-16 h-16 rounded-full  object-cover border-3 border-yellow-400"
             />
        <span
   className="text-xl sm:text-2xl md:text-3xl font-bold uppercase 

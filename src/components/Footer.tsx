@@ -39,7 +39,7 @@ const scrollToTop = () => {
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-15 h-15 rounded-lg flex items-center justify-center">
                 <img
-                 src="/logo.png"
+                 src="/vivadhara.jpg"
                   alt="Logo"
                   className="w-15 h-15 rounded-full shadow-md object-cover"
                 />
@@ -121,7 +121,7 @@ const scrollToTop = () => {
 {showScrollTop && (
   <button
     onClick={scrollToTop}
-    className="fixed bottom-10 right-6 bg-[#336021] cursor-pointer text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 z-50"
+    className="fixed bottom-10 right-6 bg-[#249915] cursor-pointer text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 z-50"
     aria-label="Scroll to Top"
   >
     <svg
