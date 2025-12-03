@@ -44,7 +44,7 @@ const scrollToTop = () => {
                   className="w-15 h-15 rounded-full shadow-md object-cover"
                 />
               </div>
-              <span className="uppercase text-2xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+              <span className="uppercase text-2xl font-bold bg-yellow-400 bg-clip-text text-transparent">
                 Vivadhara Agro
               </span>
             </div>
