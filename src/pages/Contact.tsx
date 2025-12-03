@@ -11,14 +11,30 @@ export default function Contact() {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
-    }, 3000);
-  };
+ const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+
+  const whatsappNumber = "919490922228"; // <= Your WhatsApp number (without +)
+
+  const message = `
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Subject: ${formData.subject}
+Message: ${formData.message}
+  `;
+
+  const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+
+  setSubmitted(true);
+  setTimeout(() => {
+    setSubmitted(false);
+    setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+  }, 3000);
+};
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
