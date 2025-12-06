@@ -13,9 +13,9 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
   const [showCheckout, setShowCheckout] = useState(false);
   const [userDetails, setUserDetails] = useState<UserDetails>({
     name: '',
-    email: '',
+
     phone: '',
-    address: '',
+   
   });
 
   if (!isOpen) return null;
@@ -37,9 +37,9 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
     const message = `*New Order from ${userDetails.name}*%0A%0A` +
       `*Contact Details:*%0A` +
       `Name: ${userDetails.name}%0A` +
-      `Email: ${userDetails.email}%0A` +
+    
       `Phone: ${userDetails.phone}%0A` +
-      `Address: ${userDetails.address}%0A%0A` +
+
       `*Order Items:*%0A${orderItems}%0A%0A` +
       `*Thank you for your order!*`;
 
@@ -49,7 +49,7 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
 
     clearCart();
     setShowCheckout(false);
-    setUserDetails({ name: '', email: '', phone: '', address: '' });
+    setUserDetails({ name: '',  phone: '', });
     onClose();
   };
 
@@ -152,21 +152,7 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
                 />
               </div>
 
-              <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
-                  Email Address *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={userDetails.email}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="john@example.com"
-                />
-              </div>
+             
 
               <div>
                 <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
@@ -184,21 +170,7 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
                 />
               </div>
 
-              <div>
-                <label htmlFor="address" className="block text-sm font-semibold text-gray-700 mb-2">
-                  Delivery Address *
-                </label>
-                <textarea
-                  id="address"
-                  name="address"
-                  value={userDetails.address}
-                  onChange={handleInputChange}
-                  required
-                  rows={3}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                  placeholder="123 Main St, Apt 4B, City, State 12345"
-                />
-              </div>
+            
 
               <div className="bg-blue-50 p-4 rounded-lg">
                 <p className="text-sm text-gray-600 mb-2">Order Summary:</p>
