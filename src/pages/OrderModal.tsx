@@ -13,9 +13,7 @@ export default function OrderModal({ isOpen, onClose, product }: ProceedOrderMod
 
   const [userDetails, setUserDetails] = useState<UserDetails>({
     name: "",
-    email: "",
     phone: "",
-    address: "",
   });
 
   if (!isOpen) return null;
@@ -35,9 +33,9 @@ export default function OrderModal({ isOpen, onClose, product }: ProceedOrderMod
       `*Category:* ${product.category}%0A%0A` +
       `*Customer Details:*%0A` +
       `Name: ${userDetails.name}%0A` +
-      `Email: ${userDetails.email}%0A` +
+  /*     `Email: ${userDetails.email}%0A` + */
       `Phone: ${userDetails.phone}%0A` +
-      `Address: ${userDetails.address}%0A%0A` +
+     /*  `Address: ${userDetails.address}%0A%0A` + */
       `*Thank you for your order!*`;
 
     const whatsappUrl = `https://wa.me/919490922228?text=${message}`;
@@ -45,7 +43,7 @@ export default function OrderModal({ isOpen, onClose, product }: ProceedOrderMod
 
     // Close modal + reset
     setShowCheckout(false);
-    setUserDetails({ name: "", email: "", phone: "", address: "" });
+    setUserDetails({ name: "", phone: "" });
     onClose();
   };
 
@@ -58,7 +56,7 @@ export default function OrderModal({ isOpen, onClose, product }: ProceedOrderMod
       <div className="bg-[#FAFDD6] rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden flex flex-col">
 
         {/* HEADER */}
-        <div className="bg-[#336021] text-white p-6 flex items-center justify-between">
+        <div className="bg-[#249915] text-white p-6 flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <ShoppingBag size={28} />
             <h2 className="text-2xl font-bold">
@@ -111,7 +109,7 @@ export default function OrderModal({ isOpen, onClose, product }: ProceedOrderMod
               </div>
 
               {/* EMAIL */}
-              <div>
+             {/*  <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">
                   Email Address *
                 </label>
@@ -124,7 +122,7 @@ export default function OrderModal({ isOpen, onClose, product }: ProceedOrderMod
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg"
                   placeholder="john@example.com"
                 />
-              </div>
+              </div> */}
 
               {/* PHONE */}
               <div>
@@ -143,7 +141,7 @@ export default function OrderModal({ isOpen, onClose, product }: ProceedOrderMod
               </div>
 
               {/* ADDRESS */}
-              <div>
+          {/*     <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">
                   Delivery Address *
                 </label>
@@ -157,7 +155,7 @@ export default function OrderModal({ isOpen, onClose, product }: ProceedOrderMod
                   placeholder="House No, Street, City, Pincode"
                 />
               </div>
-
+ */}
               {/* PRODUCT SUMMARY BLOCK */}
               <div className="bg-blue-50 p-4 rounded-lg">
                 <p className="text-sm text-gray-600 mb-2">Order Summary:</p>
@@ -191,7 +189,7 @@ export default function OrderModal({ isOpen, onClose, product }: ProceedOrderMod
           <div className="border-t border-gray-200 p-6 bg-gray-50">
             <button
               onClick={handleProceed}
-              className="w-full bg-[#336021] cursor-pointer text-white px-6 py-4 rounded-lg font-semibold hover:shadow-xl"
+              className="w-full bg-[#249915] cursor-pointer text-white px-6 py-4 rounded-lg font-semibold hover:shadow-xl"
             >
               Proceed Order
             </button>

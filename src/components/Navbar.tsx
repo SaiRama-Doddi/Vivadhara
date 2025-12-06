@@ -34,17 +34,17 @@ export default function Navbar({ onNavigate }: NavbarProps) {
             onClick={() => handleNavClick("home")}
           >
             <img
-              src="/vivadhara.jpg"
+              src="/logo3.png"
               alt="Logo"
-              className="w-16 h-16 rounded-full  object-cover border-3 border-yellow-400"
+              className="w-50 h-40 rounded-full  object-cover "
             />
-       <span
-  className="text-xl sm:text-2xl md:text-3xl font-bold uppercase 
-             bg-yellow-400 bg-clip-text text-transparent"
-/*   style={{ fontFamily: "AVANT GARDE" }} */
->
-  Vivadhara Agro
-</span>
+            {/*  <span
+               className="text-xl sm:text-2xl md:text-3xl font-bold uppercase 
+                bg-yellow-400 bg-clip-text text-transparent"
+                style={{ fontFamily: "AVANT GARDE" }} 
+                >
+              Vivadhara Agro
+           </span> */}
 
 
           </div>

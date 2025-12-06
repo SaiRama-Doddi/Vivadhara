@@ -8,6 +8,7 @@ import Services from './pages/Services';
 import ProductDetail from './pages/ProductDetail';
 import Testimonials from './pages/Testimonials';
 import Contact from './pages/Contact';
+import FloatingButtons from './components/FloatingButton';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -53,6 +54,7 @@ function App() {
           <Services onNavigate={handleNavigation} />
         )}
         <Footer  />
+        <FloatingButtons/>
   
       </div>
     </CartProvider>

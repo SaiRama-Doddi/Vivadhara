@@ -1,30 +1,15 @@
 import {  Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
 
-import { useState,useEffect } from 'react';
 
 
 
 export default function Footer() {
 
  
-  const [showScrollTop, setShowScrollTop] = useState(false);
-
-  useEffect(() => {
-  const handleScroll = () => {
-    setShowScrollTop(window.scrollY > 300); // show after 300px
-  };
-
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
+ 
 
 
-const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-};
+
 
 
   return (
@@ -118,7 +103,7 @@ const scrollToTop = () => {
       </div>
 
     {/* FLOATING SCROLL TO TOP BUTTON */}
-{showScrollTop && (
+{/* {showScrollTop && (
   <button
     onClick={scrollToTop}
     className="fixed bottom-10 right-6 bg-[#249915] cursor-pointer text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 z-50"
@@ -135,7 +120,7 @@ const scrollToTop = () => {
       <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
     </svg>
   </button>
-)}
+)} */}
 
     </footer>
   );
