@@ -20,24 +20,26 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
           {/* BRAND */}
-          <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-15 h-15 rounded-lg flex items-center justify-center">
-                <img
-                 src="/vivadhara.jpg"
-                  alt="Logo"
-                  className="w-15 h-15 rounded-full shadow-md object-cover"
-                />
-              </div>
-              <span className="uppercase text-2xl font-bold bg-yellow-400 bg-clip-text text-transparent">
-                Vivadhara Agro
-              </span>
-            </div>
+<div>
+  <div className="flex flex-col items-center space-y-4 mb-4">
+    {/* Logo */}
+    <div className="flex-shrink-0">
+      <img
+        src="/logo3.png"
+        alt="Logo"
+        className="w-64 h-64 rounded-full object-cover" 
+      />
+    </div>
 
-            <p className="text-gray-400">
-              Delivering excellence in organic feed ingredients & agricultural solutions.
-            </p>
-          </div>
+    {/* Text */}
+   {/*  <p className="text-gray-600 text-base leading-relaxed text-center max-w-md">
+      Delivering excellence in organic feed ingredients & agricultural solutions.
+    </p> */}
+  </div>
+</div>
+
+
+
 
           {/* CONTACT */}
           <div>
