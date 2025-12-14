@@ -92,22 +92,7 @@ export default function Services({ onNavigate }: ServicesProps) {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Need a Custom Solution?
-          </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            We can create a tailored package specifically for your business needs
-          </p>
-          <button
-            onClick={() => onNavigate('contact')}
-            className="bg-[#249915] cursor-pointer text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300"
-          >
-            Contact Us
-          </button>
-        </div>
-      </section>
+  
  {/* ---------------- ORDER MODAL ---------------- */}
       {showOrderModal && selectedProduct && (
         <OrderModal
