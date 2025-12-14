@@ -11,10 +11,18 @@ export default function Footer() {
           {/* BRAND */}
        {/* BRAND */}
 <div className="flex flex-col items-start gap-3">
-  <div className="w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 p-2 rounded-xl">
+  {/* Logo wrapper */}
+  <div className="
+    w-45 h-45
+    sm:w-38 sm:h-38
+    md:w-50 md:h-50
+    min-w-32
+    p-2
+    overflow-visible
+  ">
     <img
       src="/logo.png"
-      alt="Vivadhara Logo"
+      alt="Logo"
       className="w-full h-full object-contain"
     />
   </div>
