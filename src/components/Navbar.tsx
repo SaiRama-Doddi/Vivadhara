@@ -34,7 +34,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
 >
   {/* Logo wrapper */}
   <div className="
-    w-38 h-38
+    w-40 h-40
     sm:w-38 sm:h-38
     md:w-48 md:h-48
     min-w-32

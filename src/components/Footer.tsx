@@ -1,125 +1,111 @@
-import {  Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
-
-
-
+import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
 
 export default function Footer() {
-
- 
- 
-
-
-
-
-
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
         {/* GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
 
           {/* BRAND */}
-<div>
-<div className="flex items-center justify-center">
-  <div className="p-2">
+       {/* BRAND */}
+<div className="flex flex-col items-start gap-3">
+  <div className="w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 p-2 rounded-xl">
     <img
       src="/logo.png"
-      alt="Vivadhara Ventures"
-      className="block w-full max-w-lg h-auto rounded-xl object-contain"
+      alt="Vivadhara Logo"
+      className="w-full h-full object-contain"
     />
   </div>
+
+  <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
+    Delivering high-quality animal feed ingredients with trust,
+    nutrition, and sustainability at the core.
+  </p>
 </div>
-
-
-</div>
-
-
 
 
           {/* CONTACT */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Mail size={18} className="text-blue-400" />
+            <div className="space-y-3 text-sm">
+              <div className="flex items-start gap-3">
+                <Mail size={18} className="text-blue-400 mt-0.5" />
                 <span className="text-gray-400">vivadhara@gmail.com</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <Phone size={18} className="text-green-400" />
+
+              <div className="flex items-start gap-3">
+                <Phone size={18} className="text-green-400 mt-0.5" />
                 <span className="text-gray-400">+91 94909 22228</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <MapPin size={18} className="text-yellow-400" />
-                <span className="text-gray-400">Nandigama, Vijayawada, NTR District - 521185</span>
+
+              <div className="flex items-start gap-3">
+                <MapPin size={18} className="text-yellow-400 mt-0.5" />
+                <span className="text-gray-400 leading-relaxed">
+                  Nandigama, Vijayawada,  
+                  <br />
+                  NTR District – 521185
+                </span>
               </div>
             </div>
           </div>
 
-          {/* LINKS */}
+          {/* LINKS + SOCIAL */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <a href="#" className="text-gray-400 hover:text-white transition">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <a href="#" className="text-gray-400 hover:text-white transition">
                   Terms of Service
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <a href="#" className="text-gray-400 hover:text-white transition">
                   Support
                 </a>
               </li>
             </ul>
 
-            {/* SOCIAL MEDIA ICONS */}
-            <div className="flex space-x-4 mt-6">
-              <a href="https://www.facebook.com/share/16gSkfi7EE/?mibextid=wwXIfr" target="_blank" className="p-2 bg-gray-800 rounded-full hover:bg-blue-500 transition-all">
-                <Facebook className="text-white" size={20} />
+            {/* SOCIAL ICONS */}
+            <div className="flex gap-4 mt-6">
+              <a
+                href="https://www.facebook.com/share/16gSkfi7EE/?mibextid=wwXIfr"
+                target="_blank"
+                className="p-2 bg-gray-800 rounded-full hover:bg-blue-600 transition"
+              >
+                <Facebook size={18} />
               </a>
 
-              <a href="https://www.instagram.com/vivadhara_feed?igsh=dzZlcnJiOWoxdzBp&utm_source=qr" target="_blank" className="p-2 bg-gray-800 rounded-full hover:bg-yellow-400 transition-all">
-                <Instagram className="text-white" size={20} />
+              <a
+                href="https://www.instagram.com/vivadhara_feed"
+                target="_blank"
+                className="p-2 bg-gray-800 rounded-full hover:bg-pink-500 transition"
+              >
+                <Instagram size={18} />
               </a>
 
-              <a href="https://linkedin.com" target="_blank" className="p-2 bg-gray-800 rounded-full hover:bg-green-500 transition-all">
-                <Linkedin className="text-white" size={20} />
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                className="p-2 bg-gray-800 rounded-full hover:bg-blue-500 transition"
+              >
+                <Linkedin size={18} />
               </a>
             </div>
           </div>
         </div>
 
-        {/* COPY */}
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 Vivadhara. All rights reserved.</p>
+        {/* COPYRIGHT */}
+        <div className="border-t border-gray-800 mt-10 pt-6 text-center text-sm text-gray-500">
+          © 2025 <span className="text-white font-medium">Vivadhara</span>. All rights reserved.
         </div>
       </div>
-
-    {/* FLOATING SCROLL TO TOP BUTTON */}
-{/* {showScrollTop && (
-  <button
-    onClick={scrollToTop}
-    className="fixed bottom-10 right-6 bg-[#249915] cursor-pointer text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 z-50"
-    aria-label="Scroll to Top"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={4}
-      stroke="white"
-      className="w-6 h-6"
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
-    </svg>
-  </button>
-)} */}
-
     </footer>
   );
 }
