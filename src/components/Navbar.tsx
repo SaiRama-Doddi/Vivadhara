@@ -14,7 +14,6 @@ export default function Navbar({ onNavigate }: NavbarProps) {
     { name: "Home", page: "home" },
     { name: "About", page: "about" },
     { name: "Products", page: "products" },
-    { name: "Testimonials", page: "testimonials" },
     { name: "Contact", page: "contact" },
   ];
 
@@ -25,58 +24,72 @@ export default function Navbar({ onNavigate }: NavbarProps) {
   };
 
   return (
-    <nav className="bg-[#249915] shadow-lg fixed w-full top-0 z-50">    {/* #4CAF50 */}
+    <nav className="bg-[white] shadow-lg fixed w-full top-0 z-50">    {/* #4CAF50 */} {/*  #249915] */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24">
-          {/* LOGO */}
-          <div
-            className="flex-shrink-0 cursor-pointer flex items-center space-x-3"
-            onClick={() => handleNavClick("home")}
-          >
-            <img
-              src="/logo3.png"
-              alt="Logo"
-              className="w-50 h-40 rounded-full  object-cover "
-            />
-            {/*  <span
-               className="text-xl sm:text-2xl md:text-3xl font-bold uppercase 
-                bg-yellow-400 bg-clip-text text-transparent"
-                style={{ fontFamily: "AVANT GARDE" }} 
-                >
-              Vivadhara Agro
-           </span> */}
+        <div className="flex justify-between items-center h-20">
+   {/* LOGO */}
+<div
+  className="shrink-0 cursor-pointer flex items-center"
+  onClick={() => handleNavClick("home")}
+>
+  {/* Logo wrapper */}
+  <div className="
+    w-32 h-32
+    sm:w-36 sm:h-36
+    md:w-44 md:h-44
+    min-w-[8rem]
+    p-2
+    overflow-visible
+  ">
+    <img
+      src="/logo.png"
+      alt="Logo"
+      className="w-full h-full object-contain"
+    />
+  </div>
+</div>
 
 
-          </div>
 
           {/* DESKTOP NAV */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-center space-x-6">
-              {navItems.map((item) => (
-   <button
-  key={item.name}
-  onClick={() => handleNavClick(item.name.toLowerCase())}
-  className={`cursor-pointer relative px-3 py-3 text-lg font-medium transition-all 
-    ${
-      activeLink === item.name
-        ? "text-[#ebc890] border-b-2 border-[#f7daab]"
-        : "text-white border-b-2 border-transparent hover:text-[#f7daab]"
-    }
-  `}
->
-  {item.name}
-</button>
+      {/* DESKTOP NAV */}
+<div className="hidden md:block">
+  <div className="ml-10 flex items-center space-x-8">
+    {navItems.map((item) => (
+      <button
+        key={item.name}
+        onClick={() => handleNavClick(item.page)}
+        className={`relative text-lg font-medium transition-colors duration-300 cursor-pointer italic
+          ${
+            activeLink === item.name
+              ? "text-[#249915]"
+              : "text-gray-600 hover:text-black"
+          }
+        `}
+      >
+        {item.name}
 
+        {/* UNDERLINE */}
+        <span
+          className={`absolute left-1/2 -bottom-1 h-[2px] bg-[#249915] rounded-full transition-all duration-300
+            ${
+              activeLink === item.name
+                ? "w-full -translate-x-1/2"
+                : "w-0 group-hover:w-full group-hover:-translate-x-1/2"
+            }
+          `}
+        />
+      </button>
+    ))}
+  </div>
+</div>
 
-              ))}
-            </div>
-          </div>
 
           {/* MOBILE MENU BUTTON */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white hover:text-yellow-200 p-3 focus:outline-none"
+              className="text-black hover:text-gray-600 p-3 focus:outline-none"
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>

@@ -427,4 +427,90 @@ export const products: Product[] = [
       "https://res.cloudinary.com/dtjjjyekl/image/upload/v1764407119/IMG_9554_aayvzo.jpg"
     ],
   },
+
+
+  /* -------------------------------------------
+    12. COTTON SEED OIL CAKE
+-------------------------------------------- */
+{
+  id: "12",
+  slug: "cotton-seed-oil-cake",
+  name: "Cotton Seed Oil Cake",
+  category: "Protein-Rich Feed Ingredient",
+  shortDescription:
+    "High-protein cotton seed oil cake ideal for dairy cattle and balanced feed formulations.",
+  description:
+    `Cotton Seed Oil Cake is a widely used protein-rich cattle feed ingredient, especially suitable for dairy cattle when used in balanced rations. It supports milk production, muscle development, and overall animal health. Processed from high-quality cotton seeds, it provides essential nutrients with good digestibility and consistent quality.`,
+  specs: {
+    moisture: "Max 10%",
+    oilContent: "Min 6%",
+    crudeFiber: "Max 25%",
+    protein: "Min 24%",
+    colour: "Greenish Yellow",
+  },
+  uses: [
+    "Dairy Cattle Feed",
+    "Cattle Feed",
+    "Compound Feed Manufacturing",
+  ],
+  features: [
+    "High protein content",
+    "Enhances milk yield",
+    "Good digestibility",
+    "Consistent quality & long shelf life",
+  ],
+  images: [
+  
+    "https://res.cloudinary.com/dtjjjyekl/image/upload/v1765716926/e64eff02-56b4-4f95-ada0-2476c421afd7_fa0yzf.jpg",
+    "https://res.cloudinary.com/dtjjjyekl/image/upload/v1765716926/83982322-7532-457b-82da-aea85aeaaf40_qobwbz.jpg",
+    "https://res.cloudinary.com/dtjjjyekl/image/upload/v1765716926/89c9b00a-6ebb-4896-957f-25eb2339f245_x19stn.jpg",
+    "https://res.cloudinary.com/dtjjjyekl/image/upload/v1765716926/IMG_0397_dwyr9u.jpg"
+  ],
+},
+
+/* -------------------------------------------
+    13. GROUNDNUT OIL CAKE (PEANUT CAKE)
+-------------------------------------------- */
+{
+  id: "13",
+  slug: "groundnut-oil-cake",
+  name: "Groundnut Oil Cake (Peanut Cake)",
+  category: "High-Protein Feed Ingredient",
+  shortDescription:
+    "Natural, high-quality protein feed that is highly digestible and palatable for livestock.",
+  description:
+    `Groundnut Oil Cake, also known as Peanut Cake, is a premium natural protein-rich feed ingredient widely used in livestock and poultry nutrition. It is highly digestible and palatable, making it ideal for dairy cattle, buffalo, poultry, sheep, and goats. Regular inclusion in balanced rations helps boost milk fat, enhance animal growth, and improve overall health.`,
+  specs: {
+    crudeProtein: "45–48%",
+    moisture: "Max 10%",
+    oilContent: "Min 8%",
+    crudeFiber: "Max 14%",
+  },
+  uses: [
+    "Dairy Cattle Feed",
+    "Buffalo Feed",
+    "Poultry Feed",
+    "Sheep & Goat Feed",
+  ],
+  features: [
+    "Very high protein content",
+    "Highly digestible & palatable",
+    "Boosts milk fat",
+    "Supports animal growth & health",
+  ],
+  images: [
+ 
+    "https://res.cloudinary.com/dtjjjyekl/image/upload/v1765717116/IMG_0405_py0rzx.jpg",
+    "https://res.cloudinary.com/dtjjjyekl/image/upload/v1765717115/IMG_9631_iaoitl.jpg",
+    "https://res.cloudinary.com/dtjjjyekl/image/upload/v1765717115/IMG_9632_khk5t5.jpg"
+  ],
+},
+
+
+/* -------------------------------------------
+    14. RED GRAM HUSK (TOOR HUSK / TOOR CHUNI)
+-------------------------------------------- */
+
+
+
 ];

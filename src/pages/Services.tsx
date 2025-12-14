@@ -124,63 +124,7 @@ export default function Services({ onNavigate }: ServicesProps) {
 
 
       
-      {/* ---------------- WHY CHOOSE US ---------------- */}
-      <section className="py-20 bg-[#faf0e0]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#249915] mb-4">
-              Why Farmers Trust Us
-            </h2>
-            <p className="text-xl text-gray-600">
-              Pure. Safe. Nutrient-Rich. Reliable Every Time.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* CARD 1 */}
-            <div className="text-center p-8 rounded-xl bg-gradient-to-br from-green-50 to-white hover:shadow-xl transition-all duration-300">
-              <div className="inline-block p-4 bg-green-100 rounded-full mb-4">
-                <Wheat className="text-green-700" size={32} />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Green Energy’s bio-products
-              </h3>
-              <p className="text-gray-600">
-                Natural, high-protein feed enhancing growth, immunity & overall
-                animal health.
-              </p>
-            </div>
-
-            {/* CARD 2 */}
-            <div className="text-center p-8 rounded-xl bg-gradient-to-br from-amber-50 to-white hover:shadow-xl transition-all duration-300">
-              <div className="inline-block p-4 bg-amber-100 rounded-full mb-4">
-                <Shield className="text-amber-700" size={32} />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Safe & Reliable
-              </h3>
-              <p className="text-gray-600">
-                Imported from certified mills with strict quality and safety
-                assurance.
-              </p>
-            </div>
-
-            {/* CARD 3 */}
-            <div className="text-center p-8 rounded-xl bg-gradient-to-br from-green-50 to-white hover:shadow-xl transition-all duration-300">
-              <div className="inline-block p-4 bg-green-100 rounded-full mb-4">
-                <TrendingUp className="text-green-700" size={32} />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Better Productivity
-              </h3>
-              <p className="text-gray-600">
-                Boosts milk yield, weight gain, egg production & growth
-                efficiency.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+    
 
       {/* ---------------- CTA SECTION ---------------- */}
     <section
@@ -212,65 +156,6 @@ export default function Services({ onNavigate }: ServicesProps) {
 </section>
 
 
-{/* ---------------- WHAT MAKES US DIFFERENT ---------------- */}
-<section className="py-20 bg-[#faf0e0]">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-    <div className="text-center mb-16">
-      <h2 className="text-4xl font-bold text-gray-900 italic">
-        What Makes <span className="text-[#336021]">Vivadhara Agro</span> Different?
-      </h2>
-      <p className="text-lg text-gray-600 mt-3">
-        Premium feed ingredients backed with trust, quality & consistency.
-      </p>
-    </div>
-
-    <div className="grid md:grid-cols-3 gap-10">
-
-      {/* CARD 1 */}
-      <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 border border-green-100">
-        <div className="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center">
-<img src="https://cdn-icons-png.flaticon.com/512/706/706164.png" className="w-10 h-10" />
-
-        </div>
-        <h3 className="text-xl font-bold text-gray-900 text-center">
-          100% Natural Sourcing
-        </h3>
-        <p className="text-gray-600 text-center mt-2">
-          We source from trusted farms & certified suppliers, ensuring purity and nutrition.
-        </p>
-      </div>
-
-      {/* CARD 2 */}
-      <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 border border-yellow-100">
-        <div className="w-16 h-16 mx-auto mb-4 bg-yellow-100 rounded-full flex items-center justify-center">
-          <img src="https://cdn-icons-png.flaticon.com/512/1998/1998610.png" className="w-10 h-10" />
-        </div>
-        <h3 className="text-xl font-bold text-gray-900 text-center">
-          Global Import Quality
-        </h3>
-        <p className="text-gray-600 text-center mt-2">
-          International standard feed ingredients imported from reliable mills.
-        </p>
-      </div>
-
-      {/* CARD 3 */}
-      <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 border border-blue-100">
-        <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
-     <img src="https://cdn-icons-png.flaticon.com/512/9425/9425727.png" className="w-10 h-10" />
-
-        </div>
-        <h3 className="text-xl font-bold text-gray-900 text-center">
-          Tested & Certified
-        </h3>
-        <p className="text-gray-600 text-center mt-2">
-          Every batch undergoes nutritional, moisture & toxin checks before dispatch.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
     </div>
   );
 }

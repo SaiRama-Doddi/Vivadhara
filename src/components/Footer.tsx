@@ -21,21 +21,17 @@ export default function Footer() {
 
           {/* BRAND */}
 <div>
-  <div className="flex flex-col items-center space-y-4 mb-4">
-    {/* Logo */}
-    <div className="flex-shrink-0">
-      <img
-        src="/logo3.png"
-        alt="Logo"
-        className="w-64 h-64 rounded-full object-cover" 
-      />
-    </div>
-
-    {/* Text */}
-   {/*  <p className="text-gray-600 text-base leading-relaxed text-center max-w-md">
-      Delivering excellence in organic feed ingredients & agricultural solutions.
-    </p> */}
+<div className="flex items-center justify-center">
+  <div className="p-2">
+    <img
+      src="/logo.png"
+      alt="Vivadhara Ventures"
+      className="block w-full max-w-lg h-auto rounded-xl object-contain"
+    />
   </div>
+</div>
+
+
 </div>
 
 

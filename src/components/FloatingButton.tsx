@@ -33,7 +33,7 @@ const FloatingButtons: React.FC = () => {
       {/* WhatsApp Button */}
       <button
         onClick={handleWhatsApp}
-        className="fixed bottom-10 right-8 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 hover:scale-110 transition-transform duration-300 z-40 cursor-pointer"
+        className="fixed bottom-10 right-8 bg-green-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 hover:scale-110 transition-transform duration-300 z-40 cursor-pointer"
         aria-label="Chat on WhatsApp"
       >
         <FaWhatsapp className="w-9 h-9" />
