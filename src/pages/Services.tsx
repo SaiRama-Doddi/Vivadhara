@@ -2,12 +2,7 @@
 import { products } from '../data/products';
 import { useState } from 'react';
 import OrderModal from './OrderModal';
-import {
 
-  Wheat,
-  Shield,
-  TrendingUp,
-} from "lucide-react";
 
 interface ServicesProps {
   onNavigate: (page: string, productId?: string) => void;

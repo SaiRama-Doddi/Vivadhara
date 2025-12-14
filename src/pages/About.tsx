@@ -1,4 +1,4 @@
-import { Target, Users, Award, Heart } from 'lucide-react';
+
 
 export default function About() {
   return (
