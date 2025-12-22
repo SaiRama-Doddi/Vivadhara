@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Mail, Phone,  Facebook, Instagram, Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -48,14 +48,14 @@ export default function Footer() {
                 <span className="text-gray-400">+91 94909 22228</span>
               </div>
 
-              <div className="flex items-start gap-3">
+             {/*  <div className="flex items-start gap-3">
                 <MapPin size={18} className="text-yellow-400 mt-0.5" />
                 <span className="text-gray-400 leading-relaxed">
                   Nandigama, Vijayawada,  
                   <br />
                   NTR District – 521185
                 </span>
-              </div>
+              </div> */}
             </div>
           </div>
 
