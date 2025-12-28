@@ -72,15 +72,49 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <button
-                onClick={() => onNavigate("products")}
-                className="bg-[#249915] text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center space-x-2"
-              >
-                <span className="text-lg cursor-pointer text-md">
-                  Explore Products
-                </span>
-                <ArrowRight size={20} />
-              </button>
+    <button
+  onClick={() => onNavigate("products")}
+  className="
+    group relative inline-flex items-center gap-1.5
+    px-8 py-3              /* 🔽 smaller padding */
+    w-fit                  /* 🔥 force content width */
+    whitespace-nowrap      /* 🔥 prevent stretching */
+    rounded-md
+    font-semibold text-sm  /* 🔽 smaller text */
+    text-white
+    bg-gradient-to-r from-green-600 via-lime-600 to-blue-600
+    shadow-md shadow-blue-500/30
+    hover:shadow-lg hover:shadow-green-500/40
+    transition-all duration-300 ease-out
+    hover:scale-[1.03]
+    overflow-hidden cursor-pointer
+  "
+>
+  {/* Shine */}
+  <span
+    className="
+      absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent
+      translate-x-[-100%] group-hover:translate-x-[100%]
+      transition-transform duration-700
+    "
+  />
+
+  <span className="relative z-10">
+    Explore Products
+  </span>
+
+  <ArrowRight
+    size={16}
+    className="
+      relative z-10
+      transition-transform duration-300
+      group-hover:translate-x-0.5
+    "
+  />
+</button>
+
+
+
 
              {/*  <a
                 href="#blog"

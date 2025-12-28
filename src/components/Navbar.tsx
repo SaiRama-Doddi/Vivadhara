@@ -24,7 +24,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
   };
 
   return (
-    <nav className="bg-[white] shadow-lg fixed w-full top-0 z-50">    {/* #4CAF50 */} {/*  #249915] */}
+    <nav className="bg-[#0b6623] shadow-lg fixed w-full top-0 z-50">    {/* #4CAF50 */} {/*  #249915] */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
    {/* LOGO */}
@@ -34,15 +34,15 @@ export default function Navbar({ onNavigate }: NavbarProps) {
 >
   {/* Logo wrapper */}
   <div className="
-    w-40 h-40
+    w-48 h-48
     sm:w-38 sm:h-38
-    md:w-48 md:h-48
+    md:w-50 md:h-53
     min-w-32
     p-2
     overflow-visible
   ">
     <img
-      src="/logo.png"
+      src="/logo5.PNG"
       alt="Logo"
       className="w-full h-full object-contain"
     />
@@ -59,11 +59,11 @@ export default function Navbar({ onNavigate }: NavbarProps) {
       <button
         key={item.name}
         onClick={() => handleNavClick(item.page)}
-        className={`relative text-lg font-medium transition-colors duration-300 cursor-pointer italic
+        className={`relative text-lg font-normal transition-colors duration-300 cursor-pointer italic
           ${
             activeLink === item.name
-              ? "text-[#249915]"
-              : "text-gray-600 hover:text-black"
+              ? "text-[#FAFDD6]"
+              : "text-white hover:text-shadow-white"
           }
         `}
       >
@@ -71,7 +71,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
 
         {/* UNDERLINE */}
         <span
-          className={`absolute left-1/2 -bottom-1 h-[2px] bg-[#249915] rounded-full transition-all duration-300
+          className={`absolute left-1/2 -bottom-1 h-[2px] bg-[#FAFDD6] rounded-full transition-all duration-300
             ${
               activeLink === item.name
                 ? "w-full -translate-x-1/2"
@@ -89,7 +89,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-black hover:text-gray-600 p-3 focus:outline-none"
+              className="text-white hover:text-[#FAFDD6] p-3 focus:outline-none"
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>

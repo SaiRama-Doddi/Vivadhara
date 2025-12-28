@@ -1,119 +1,136 @@
-import { Mail, Phone,  Facebook, Instagram, Linkedin } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  Facebook,
+  Instagram,
+  Linkedin,
+} from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="relative bg-gray-950 text-white overflow-hidden">
+      
+      {/* TOP GRADIENT LINE */}
+      <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-green-400 via-blue-500 to-purple-500" />
+
+      <div className="max-w-7xl mx-auto px-6 py-14">
 
         {/* GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
 
           {/* BRAND */}
-       {/* BRAND */}
-<div className="flex flex-col items-start gap-3">
-  {/* Logo wrapper */}
-  <div className="
-    w-45 h-45
-    sm:w-38 sm:h-38
-    md:w-50 md:h-50
-    min-w-32
-    p-2
-    overflow-visible
-  ">
-    <img
-      src="/logo.png"
-      alt="Logo"
-      className="w-full h-full object-contain"
-    />
-  </div>
+          <div className="space-y-4">
+            <img
+              src="/logo5.PNG"
+              alt="Vivadhara Logo"
+              className="w-50 object-contain"
+            />
 
-  <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-    Delivering high-quality animal feed ingredients with trust,
-    nutrition, and sustainability at the core.
-  </p>
-</div>
-
+            <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
+              Delivering high-quality animal feed ingredients with
+              trust, nutrition, and sustainability at the core.
+            </p>
+          </div>
 
           {/* CONTACT */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
-            <div className="space-y-3 text-sm">
-              <div className="flex items-start gap-3">
-                <Mail size={18} className="text-blue-400 mt-0.5" />
-                <span className="text-gray-400">vivadhara@gmail.com</span>
-              </div>
+            <h3 className="text-lg font-semibold mb-5 tracking-wide">
+              Contact
+            </h3>
 
-              <div className="flex items-start gap-3">
-                <Phone size={18} className="text-green-400 mt-0.5" />
-                <span className="text-gray-400">+91 94909 22228</span>
-              </div>
-
-             {/*  <div className="flex items-start gap-3">
-                <MapPin size={18} className="text-yellow-400 mt-0.5" />
-                <span className="text-gray-400 leading-relaxed">
-                  Nandigama, Vijayawada,  
-                  <br />
-                  NTR District – 521185
+            <div className="space-y-4 text-sm">
+              <div className="flex items-center gap-3 group">
+                <Mail className="text-blue-400 group-hover:scale-110 transition" size={18} />
+                <span className="text-gray-400 group-hover:text-white transition">
+                  vivadhara@gmail.com
                 </span>
-              </div> */}
+              </div>
+
+              <div className="flex items-center gap-3 group">
+                <Phone className="text-green-400 group-hover:scale-110 transition" size={18} />
+                <span className="text-gray-400 group-hover:text-white transition">
+                  +91 94909 22228
+                </span>
+              </div>
             </div>
           </div>
 
-          {/* LINKS + SOCIAL */}
+          {/* LINKS & SOCIAL */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition">
-                  Terms of Service
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition">
-                  Support
-                </a>
-              </li>
+            <h3 className="text-lg font-semibold mb-5 tracking-wide">
+              Quick Links
+            </h3>
+
+            <ul className="space-y-3 text-sm">
+              {["Privacy Policy", "Terms of Service", "Support"].map((item) => (
+                <li key={item}>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition hover:translate-x-1 inline-block"
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
             </ul>
 
             {/* SOCIAL ICONS */}
             <div className="flex gap-4 mt-6">
-              <a
+              <SocialIcon
                 href="https://www.facebook.com/share/16gSkfi7EE/?mibextid=wwXIfr"
-                target="_blank"
-                className="p-2 bg-gray-800 rounded-full hover:bg-blue-600 transition"
+                color="hover:bg-blue-600"
               >
                 <Facebook size={18} />
-              </a>
+              </SocialIcon>
 
-              <a
+              <SocialIcon
                 href="https://www.instagram.com/vivadhara_feed"
-                target="_blank"
-                className="p-2 bg-gray-800 rounded-full hover:bg-pink-500 transition"
+                color="hover:bg-pink-500"
               >
                 <Instagram size={18} />
-              </a>
+              </SocialIcon>
 
-              <a
+              <SocialIcon
                 href="https://linkedin.com"
-                target="_blank"
-                className="p-2 bg-gray-800 rounded-full hover:bg-blue-500 transition"
+                color="hover:bg-blue-500"
               >
                 <Linkedin size={18} />
-              </a>
+              </SocialIcon>
             </div>
           </div>
         </div>
 
-        {/* COPYRIGHT */}
-        <div className="border-t border-gray-800 mt-10 pt-6 text-center text-sm text-gray-500">
-          © 2025 <span className="text-white font-medium">Vivadhara</span>. All rights reserved.
+        {/* DIVIDER */}
+        <div className="border-t border-gray-800 mt-12 pt-6 text-center text-sm text-gray-500">
+          © 2025{" "}
+          <span className="text-white font-semibold">
+            Vivadhara
+          </span>
+          . All rights reserved.
         </div>
       </div>
     </footer>
+  );
+}
+
+/* SOCIAL ICON WRAPPER */
+function SocialIcon({
+  href,
+  color,
+  children,
+}: {
+  href: string;
+  color: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      className={`p-2 rounded-full bg-gray-800 ${color}
+        transition transform hover:-translate-y-1 hover:shadow-lg`}
+    >
+      {children}
+    </a>
   );
 }
