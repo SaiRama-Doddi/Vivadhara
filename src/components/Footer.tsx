@@ -20,11 +20,15 @@ export default function Footer() {
 
           {/* BRAND */}
           <div className="space-y-4">
-            <img
-              src="/logo5.PNG"
-              alt="Vivadhara Logo"
-              className="w-50 object-contain"
-            />
+           <img
+  src="/logo5.PNG"
+  alt="Vivadhara Logo"
+  className="
+    w-56 h-56          /* 🔥 larger logo */
+    md:w-64 md:h-64    /* 🔥 even bigger on desktop */
+    object-contain
+  "
+/>
 
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
               Delivering high-quality animal feed ingredients with
