@@ -164,7 +164,7 @@ export const products: Product[] = [
   /* -------------------------------------------
       5. CORN COB POWDER
   -------------------------------------------- */
-  {
+  /* {
     id: "5",
     slug: "corn-cob-powder",
     name: "Corn Cob Powder",
@@ -199,12 +199,12 @@ export const products: Product[] = [
       "https://res.cloudinary.com/dtjjjyekl/image/upload/v1764405361/corn-cub-powder2_aff6gs.jpg",
       "https://res.cloudinary.com/dtjjjyekl/image/upload/v1764405359/corn-cub-powder5_p3fjg3.jpg",
     ],
-  },
+  }, */
 
   /* -------------------------------------------
       6. GROUNDNUT SHELL POWDER
   -------------------------------------------- */
-  {
+ /*  {
     id: "6",
     slug: "groundnut-shell-powder",
     name: "Groundnut Shell Powder",
@@ -241,11 +241,11 @@ export const products: Product[] = [
       "https://res.cloudinary.com/dtjjjyekl/image/upload/v1764404937/Groundnut_Shell_Powder-1_niutnf.jpg",
     ],
   },
-
+ */
   /* -------------------------------------------
       7. BLACK GRAM / URAD DAL HUSK
   -------------------------------------------- */
-  {
+  /* {
     id: "7",
     slug: "urad-husk",
     name: "Black Gram / Urad Dal Husk",
@@ -274,12 +274,12 @@ export const products: Product[] = [
       "https://res.cloudinary.com/dtjjjyekl/image/upload/v1764405355/Black_Gram_Urad_Dal_Husk-3_wksari.jpg",
       "https://res.cloudinary.com/dtjjjyekl/image/upload/v1764405355/Black_Gram_Urad_Dal_Husk-2_bdwpls.jpg",
     ],
-  },
+  }, */
 
   /* -------------------------------------------
       8. MAIZE DOC
   -------------------------------------------- */
-  {
+  /* {
     id: "8",
     slug: "maize-doc",
     name: "Maize DOC (De-Oiled Cake)",
@@ -316,11 +316,11 @@ export const products: Product[] = [
       "https://res.cloudinary.com/dtjjjyekl/image/upload/v1764405359/Maize_DOC_De-Oiled_Cake_-2_avdlvb.jpg",
       "https://res.cloudinary.com/dtjjjyekl/image/upload/v1764405358/Maize_DOC_De-Oiled_Cake_-1_cyjxe5.jpg",
     ],
-  },
+  }, */
 
   /* -------------------------------------------
       9. REDGRAM / TOOR HUSK
-  -------------------------------------------- */
+ /*
   {
     id: "9",
     slug: "redgram-husk",
@@ -353,7 +353,7 @@ export const products: Product[] = [
       "https://res.cloudinary.com/dtjjjyekl/image/upload/v1764406048/Redgram_Husk_Toor_Dal_Husk-1_n5ufve.jpg"
     ],
   },
-
+ */
   /* -------------------------------------------
       10. WHEAT BRAN
   -------------------------------------------- */
@@ -432,6 +432,7 @@ export const products: Product[] = [
   /* -------------------------------------------
     12. COTTON SEED OIL CAKE
 -------------------------------------------- */
+/* 
 {
   id: "12",
   slug: "cotton-seed-oil-cake",
@@ -467,11 +468,11 @@ export const products: Product[] = [
     "https://res.cloudinary.com/dtjjjyekl/image/upload/v1765716926/IMG_0397_dwyr9u.jpg"
   ],
 },
-
+ */
 /* -------------------------------------------
     13. GROUNDNUT OIL CAKE (PEANUT CAKE)
 -------------------------------------------- */
-{
+/* {
   id: "13",
   slug: "groundnut-oil-cake",
   name: "Groundnut Oil Cake (Peanut Cake)",
@@ -504,7 +505,7 @@ export const products: Product[] = [
     "https://res.cloudinary.com/dtjjjyekl/image/upload/v1765717115/IMG_9631_iaoitl.jpg",
     "https://res.cloudinary.com/dtjjjyekl/image/upload/v1765717115/IMG_9632_khk5t5.jpg"
   ],
-},
+}, */
 
 
 /* -------------------------------------------
