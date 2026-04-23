@@ -42,7 +42,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
     overflow-visible
   ">
     <img
-      src="/logo5.PNG"
+      src="/v1.PNG"
       alt="Logo"
       className="w-full h-full object-contain"
     />
