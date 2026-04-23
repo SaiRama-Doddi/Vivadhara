@@ -21,7 +21,7 @@ export default function Footer() {
           {/* BRAND */}
           <div className="space-y-4">
            <img
-  src="/logo5.PNG"
+  src="/v1.PNG"
   alt="Vivadhara Logo"
   className="
     w-56 h-56          /* 🔥 larger logo */

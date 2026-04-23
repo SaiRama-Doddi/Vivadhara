@@ -33,20 +33,22 @@ export default function Navbar({ onNavigate }: NavbarProps) {
   onClick={() => handleNavClick("home")}
 >
   {/* Logo wrapper */}
-  <div className="
-    w-48 h-48
-    sm:w-38 sm:h-38
-    md:w-50 md:h-53
-    min-w-32
-    p-2
-    overflow-visible
-  ">
-    <img
-      src="/v1.PNG"
-      alt="Logo"
-      className="w-full h-full object-contain"
-    />
-  </div>
+{/* Logo wrapper */}
+{/* Logo wrapper */}
+<div className="
+  w-48 h-48
+  sm:w-56 sm:h-56
+  md:w-64 md:h-64
+  min-w-[120px]
+  p-2
+  overflow-visible
+">
+  <img
+    src="/v1.PNG"
+    alt="Logo"
+    className="w-full h-full object-contain"
+  />
+</div>
 </div>
 
 
